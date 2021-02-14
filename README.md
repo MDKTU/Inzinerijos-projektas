@@ -1,2 +1,2 @@
-# In-inerijos-projektas
+# Inzinerijos-projektas
 Projekto  repozitorija
