@@ -28,6 +28,9 @@ public class PlayerMovement : MonoBehaviour
         Vector3 verticalMove = transform.up * verticalInput * speed * Time.fixedDeltaTime * verticalMultiplier;
         rb.MovePosition(rb.position + forwardMove + verticalMove);
 
+
+
+
     }
 
     // Update is called once per frame
