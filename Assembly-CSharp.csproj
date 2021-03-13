@@ -64,11 +64,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\CameraFollow.cs" />
-    <Compile Include="Assets\Scripts\GroundSpawner.cs" />
-    <Compile Include="Assets\Scripts\GroundTile.cs" />
-    <Compile Include="Assets\Scripts\PlayerMovement.cs" />
+    <Compile Include="Assets\Scripts\PlayerCameraController.cs" />
+    <Compile Include="Assets\Scripts\PlayerController.cs" />
+    <Compile Include="Assets\Scripts\PlotSpawner.cs" />
+    <Compile Include="Assets\Scripts\PrefabSpawnManager.cs" />
     <Compile Include="Assets\Scripts\SimpleCameraController.cs" />
+    <Compile Include="Assets\Scripts\TileSpawner.cs" />
     <Reference Include="UnityEngine">
       <HintPath>H:/Unity/Unity Hub/Editor/2019.4.20f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
@@ -600,8 +601,14 @@
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>H:/Unity/Projects/Inzinerijos_Projektas/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.ProGrids">
+      <HintPath>H:/Unity/Projects/Inzinerijos_Projektas/Library/ScriptAssemblies/Unity.ProGrids.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.VSCode.Editor">
       <HintPath>H:/Unity/Projects/Inzinerijos_Projektas/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.ProGrids.Editor">
+      <HintPath>H:/Unity/Projects/Inzinerijos_Projektas/Library/ScriptAssemblies/Unity.ProGrids.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>H:/Unity/Projects/Inzinerijos_Projektas/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
