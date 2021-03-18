@@ -23,8 +23,8 @@ public class PlayerController : MonoBehaviour
         //float zMovement = Input.GetAxis("Vertical") * movementSpeed;         // z axis (forward)
         float zMovement = movementSpeed;         // z axis (forward)
         transform.Translate(new Vector3(xMovement, 0, zMovement) * Time.deltaTime); // Movement execution
-        //transform.Translate(new Vector3(xMovement, 0, zMovement) * Time.deltaTime); // Movement execution
-        
+                                                                                    //transform.Translate(new Vector3(xMovement, 0, zMovement) * Time.deltaTime); // Movement execution
+
         //failed jump scrap from another dev(Paulius)
         //leaving just in case
         /*
@@ -34,8 +34,17 @@ public class PlayerController : MonoBehaviour
             onGround = false;
         }
         */
-        
-        
+
+        //Boundaries for player. Clamping movement on x axis
+        // initially, the temporary vector should equal the player's position
+        Vector3 clampedPosition = transform.position;
+        // Now we can manipulte it to clamp the x element
+        clampedPosition.x = Mathf.Clamp(clampedPosition.x, -24.5f, 24.5f);
+        // re-assigning the transform's position will clamp it
+        transform.position = clampedPosition;
+
+
+
         if ((Input.GetKey(KeyCode.W) | Input.GetKey(KeyCode.UpArrow)) & onGround == true) 
         {
             rb.AddForce(new Vector3(0, 15, 0), ForceMode.Impulse);
