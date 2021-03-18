@@ -7,7 +7,8 @@ public class PlayerController : MonoBehaviour
     //player movement speed
     public float movementSpeed = 1000;
     public PrefabSpawnManager tileSpawnManager;
-    bool inAir = false;
+    bool onGround = false;
+    public Rigidbody rb;
 
     // Start is called before the first frame update
     void Start()
@@ -23,18 +24,32 @@ public class PlayerController : MonoBehaviour
         float zMovement = movementSpeed;         // z axis (forward)
         transform.Translate(new Vector3(xMovement, 0, zMovement) * Time.deltaTime); // Movement execution
         //transform.Translate(new Vector3(xMovement, 0, zMovement) * Time.deltaTime); // Movement execution
-
-        if((Input.GetKeyDown("w") && inAir == false)|| (Input.GetKeyDown("space") && inAir == false))
+        
+        //failed jump scrap from another dev(Paulius)
+        //leaving just in case
+        /*
+        if((Input.GetKeyDown("w") && onGround == true)|| (Input.GetKeyDown("space") && onGround == true))
         {
-            transform.Translate(new Vector3(xMovement, 1000, zMovement) * Time.deltaTime);
-            inAir = true;
+            transform.Translate(new Vector3(xMovement, 5, zMovement) * Time.deltaTime);
+            onGround = false;
+        }
+        */
+        
+        
+        if ((Input.GetKey(KeyCode.W) | Input.GetKey(KeyCode.UpArrow)) & onGround == true) 
+        {
+            rb.AddForce(new Vector3(0, 15, 0), ForceMode.Impulse);
+            onGround = false;
         }
 
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        tileSpawnManager.TileSpawnTriggered();
+        //wtf there shoudnt ne someting like this (Paulius)
+        //leaving just in case
+        //tileSpawnManager.TileSpawnTriggered();
+        onGround = true;
     }
 
 }

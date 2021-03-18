@@ -7,6 +7,9 @@ public class TileSpawner : MonoBehaviour
 {
     public List<GameObject> tiles;
     private float offset = 150f; //length of three tiles
+    GameObject player;
+    PrefabSpawnManager spawnManager;
+
 
 
     // Start is called before the first frame update
@@ -32,6 +35,6 @@ public class TileSpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }
