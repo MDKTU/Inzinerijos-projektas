@@ -27,6 +27,7 @@ public class PrefabSpawnManager : MonoBehaviour
     public void TileSpawnTriggered()
     {
         tileSpawner.MoveTile();
-        plotSpawner.SpawnPlot();
+        //plotSpawner.SpawnPlot();
+        plotSpawner.MovePlot();
     }
 }
