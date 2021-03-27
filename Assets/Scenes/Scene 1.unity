@@ -424,7 +424,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   plots:
   - {fileID: 332691232}
-  - {fileID: 160992407}
   - {fileID: 1694003793}
   - {fileID: 1460155754}
   - {fileID: 1280674690}
@@ -1211,7 +1210,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1080088164}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e784857e6916aa948a9f25a86f7dee61, type: 3}
   m_Name: 
@@ -2147,7 +2146,7 @@ Transform:
   m_GameObject: {fileID: 1735538599}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.92, y: 1, z: 1}
   m_Children:
   - {fileID: 1404219684}
   - {fileID: 1006677228}
