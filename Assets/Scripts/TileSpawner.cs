@@ -6,11 +6,7 @@ using System.Linq;
 public class TileSpawner : MonoBehaviour
 {
     public List<GameObject> tiles;
-    private float offset = 150f; //length of three tiles
-    GameObject player;
-    PrefabSpawnManager spawnManager;
-
-
+    private float offset = 270f; //length of three tiles
 
     // Start is called before the first frame update
     void Start()

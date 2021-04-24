@@ -1,39 +1,52 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    //player movement speed
-    public float movementSpeed = 1000;
+    public float movementSpeed = 45;
     public PrefabSpawnManager tileSpawnManager;
-    bool onGround = false;
     public Rigidbody rb;
+
+
+    public float jumpHeight = 500f;
+    public bool isGrounded;
+    public float NumberJumps = 0f;
+    public float MaxJumps = 1;
+
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        rb = GetComponent<Rigidbody>();
     }
+
+
 
     // Update is called once per frame
     void Update()
     {
         float xMovement = Input.GetAxis("Horizontal") * movementSpeed / 2; // x axis (side to side)
-        //float zMovement = Input.GetAxis("Vertical") * movementSpeed;         // z axis (forward)
-        float zMovement = movementSpeed;         // z axis (forward)
+        float zMovement = movementSpeed; // z axis (forward)
         transform.Translate(new Vector3(xMovement, 0, zMovement) * Time.deltaTime); // Movement execution
-                                                                                    //transform.Translate(new Vector3(xMovement, 0, zMovement) * Time.deltaTime); // Movement execution
+        Vector3 movement = new Vector3(xMovement, 0, zMovement);
+        transform.rotation = Quaternion.LookRotation(movement);
 
-        //failed jump scrap from another dev(Paulius)
-        //leaving just in case
-        /*
-        if((Input.GetKeyDown("w") && onGround == true)|| (Input.GetKeyDown("space") && onGround == true))
+        if (NumberJumps > MaxJumps - 1)
         {
-            transform.Translate(new Vector3(xMovement, 5, zMovement) * Time.deltaTime);
-            onGround = false;
+            isGrounded = false;
         }
-        */
+
+        if (isGrounded)
+        {
+            if (Input.GetButtonDown("Jump"))
+            {
+                rb.AddForce(Vector3.up * jumpHeight);
+                NumberJumps += 1;
+            }
+        }
+
+
+
+
 
         //Boundaries for player. Clamping movement on x axis
         // initially, the temporary vector should equal the player's position
@@ -43,22 +56,21 @@ public class PlayerController : MonoBehaviour
         // re-assigning the transform's position will clamp it
         transform.position = clampedPosition;
 
-
-
-        if ((Input.GetKey(KeyCode.W) | Input.GetKey(KeyCode.UpArrow)) & onGround == true) 
-        {
-            rb.AddForce(new Vector3(0, 15, 0), ForceMode.Impulse);
-            onGround = false;
-        }
-
     }
+
 
     private void OnTriggerEnter(Collider other)
     {
-        //wtf there shoudnt ne someting like this (Paulius)
-        //leaving just in case
-        //tileSpawnManager.TileSpawnTriggered();
-        onGround = true;
+        tileSpawnManager.TileSpawnTriggered();
+    }
+    void OnCollisionEnter(Collision other)
+    {
+        isGrounded = true;
+        NumberJumps = 0;
+    }
+    void OnCollisionExit(Collision other)
+    {
+
     }
 
 }

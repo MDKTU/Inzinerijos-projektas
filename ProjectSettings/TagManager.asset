@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Tile Spawn Trigger
+  - Ground
   layers:
   - Default
   - TransparentFX

@@ -6,7 +6,7 @@ public class PlayerCameraController : MonoBehaviour
 {
     private Transform player;
 
-    private float xOffset = 0f; //not sure if we want camera movement in x axis or not
+    private float xOffset = 0f;
     private float yOffset = 4f;
     private float zOffset = -10f; 
 
