@@ -5,8 +5,8 @@ using UnityEngine;
 
 public class PlotSpawner : MonoBehaviour
 {
-    private float offset = 150f; //length of one plot
-
+    private float offset = 270; //length of one plot (distance between triggers)
+    
     public List<GameObject> plots;
 
     // Start is called before the first frame update

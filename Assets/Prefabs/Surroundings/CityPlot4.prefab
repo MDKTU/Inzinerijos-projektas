@@ -106,7 +106,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5549786419364648063}
   m_Layer: 0
-  m_Name: New Prefab 1
+  m_Name: CityPlot4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
