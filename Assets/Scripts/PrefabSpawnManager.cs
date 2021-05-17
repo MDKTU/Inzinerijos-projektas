@@ -13,6 +13,8 @@ public class PrefabSpawnManager : MonoBehaviour
     {
         tileSpawner = GetComponent<TileSpawner>();
         plotSpawner = GetComponent<PlotSpawner>();
+        tileSpawner.SpawnObstacles(2);
+
     }
 
     // Update is called once per frame
@@ -23,6 +25,8 @@ public class PrefabSpawnManager : MonoBehaviour
     public void TileSpawnTriggered()
     {
         tileSpawner.MoveTile();
+        tileSpawner.SpawnObstacles(0);
         plotSpawner.MovePlot();
     }
+
 }

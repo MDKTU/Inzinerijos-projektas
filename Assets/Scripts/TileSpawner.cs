@@ -8,6 +8,8 @@ public class TileSpawner : MonoBehaviour
     public List<GameObject> tiles;
     private float offset = 270f; //length of three tiles
 
+    public List<GameObject> obstaclePrefabs;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -27,10 +29,32 @@ public class TileSpawner : MonoBehaviour
         tiles.Add(movedTile);
     }
 
+    
 
     // Update is called once per frame
     void Update()
     {
 
+    }
+
+
+    public void SpawnObstacles(int x)
+    {
+        // Choose a random point to spawn the obstacle
+        
+        for(int i = x; i < tiles.Count; i++)
+        {
+            for(int j = 0; j < 18; j++)
+            {
+                Transform spawnPoint = tiles[i].transform.GetChild(j).transform;
+                if (spawnPoint.childCount == 0)
+                {
+                    var obj = obstaclePrefabs[Random.Range(0, obstaclePrefabs.Count)];
+                    Instantiate(obj, spawnPoint.position, Quaternion.Euler(0,Random.Range(0f,360f),0), spawnPoint);
+
+                }
+                //Debug.Log(spawnPoint.name);
+            }
+        }
     }
 }
