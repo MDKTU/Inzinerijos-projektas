@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4808989791989508}
   - component: {fileID: 33198316923250270}
   - component: {fileID: 23897919490375960}
+  - component: {fileID: 2376364750832304518}
   m_Layer: 11
   m_Name: bus-school-base
   m_TagString: Untagged
@@ -85,6 +86,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &2376364750832304518
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1021901311787062}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 0
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300010, guid: 8937fe22601444279a3bcb780d316681, type: 3}
 --- !u!1 &1075253422756978
 GameObject:
   m_ObjectHideFlags: 0
@@ -258,9 +273,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4373135591367750}
+  - component: {fileID: 4514332130932660073}
+  - component: {fileID: 7154669514103331540}
   m_Layer: 11
   m_Name: bus-school
-  m_TagString: Untagged
+  m_TagString: Obsticle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -284,6 +301,32 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &4514332130932660073
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1300031234415390}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3, y: 2.6, z: 8.8}
+  m_Center: {x: 0, y: 1.7938105, z: -0.23692465}
+--- !u!65 &7154669514103331540
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1300031234415390}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.1, y: 2.7, z: 8.9}
+  m_Center: {x: 0, y: 1.7938105, z: -0.23692465}
 --- !u!1 &1620208570081582
 GameObject:
   m_ObjectHideFlags: 0

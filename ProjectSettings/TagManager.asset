@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Tile Spawn Trigger
   - Ground
+  - Obsticle
   layers:
   - Default
   - TransparentFX
