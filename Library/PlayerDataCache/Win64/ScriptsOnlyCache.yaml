@@ -5,6 +5,7 @@ ScriptsOnlyBuild:
     - HealthManagment
     - LoserMenu
     - MainMenu
+    - PauseMenuScript
     - PlayerCameraController
     - PlayerController
     - PlotSpawner
@@ -65,23 +66,23 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 2032}
+      Script: {instanceID: 2036}
     - Class: 114
-      Script: {instanceID: 2428}
+      Script: {instanceID: 2432}
     - Class: 114
-      Script: {instanceID: 3460}
+      Script: {instanceID: 3466}
     - Class: 114
-      Script: {instanceID: 3682}
+      Script: {instanceID: 3688}
     - Class: 114
-      Script: {instanceID: 3740}
+      Script: {instanceID: 3746}
     - Class: 114
-      Script: {instanceID: 3950}
+      Script: {instanceID: 3956}
     - Class: 114
-      Script: {instanceID: 4320}
+      Script: {instanceID: 4328}
     - Class: 114
-      Script: {instanceID: 4402}
+      Script: {instanceID: 4410}
     - Class: 114
-      Script: {instanceID: 4498}
+      Script: {instanceID: 4506}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -126,33 +127,33 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 2032}
+      Script: {instanceID: 2036}
     - Class: 114
-      Script: {instanceID: 2282}
+      Script: {instanceID: 2286}
     - Class: 114
-      Script: {instanceID: 2428}
+      Script: {instanceID: 2432}
     - Class: 114
-      Script: {instanceID: 2896}
+      Script: {instanceID: 2900}
     - Class: 114
-      Script: {instanceID: 3460}
+      Script: {instanceID: 3466}
     - Class: 114
-      Script: {instanceID: 3512}
+      Script: {instanceID: 3518}
     - Class: 114
-      Script: {instanceID: 3682}
+      Script: {instanceID: 3688}
     - Class: 114
-      Script: {instanceID: 3740}
+      Script: {instanceID: 3746}
     - Class: 114
-      Script: {instanceID: 3924}
-    - Class: 114
-      Script: {instanceID: 3950}
+      Script: {instanceID: 3930}
     - Class: 114
       Script: {instanceID: 3956}
     - Class: 114
-      Script: {instanceID: 4320}
+      Script: {instanceID: 3962}
     - Class: 114
-      Script: {instanceID: 4498}
+      Script: {instanceID: 3970}
     - Class: 114
-      Script: {instanceID: 133300}
+      Script: {instanceID: 4328}
+    - Class: 114
+      Script: {instanceID: 4506}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -213,33 +214,41 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1976}
+      Script: {instanceID: 1980}
     - Class: 114
-      Script: {instanceID: 2032}
+      Script: {instanceID: 2036}
     - Class: 114
-      Script: {instanceID: 2298}
+      Script: {instanceID: 2302}
     - Class: 114
-      Script: {instanceID: 2446}
+      Script: {instanceID: 2432}
     - Class: 114
-      Script: {instanceID: 2826}
+      Script: {instanceID: 2450}
     - Class: 114
-      Script: {instanceID: 2904}
+      Script: {instanceID: 2830}
     - Class: 114
-      Script: {instanceID: 2918}
+      Script: {instanceID: 2908}
     - Class: 114
-      Script: {instanceID: 3058}
+      Script: {instanceID: 2922}
     - Class: 114
-      Script: {instanceID: 3460}
+      Script: {instanceID: 3064}
     - Class: 114
-      Script: {instanceID: 3564}
+      Script: {instanceID: 3466}
     - Class: 114
-      Script: {instanceID: 3682}
+      Script: {instanceID: 3570}
     - Class: 114
-      Script: {instanceID: 3950}
+      Script: {instanceID: 3688}
     - Class: 114
-      Script: {instanceID: 4320}
+      Script: {instanceID: 3746}
     - Class: 114
-      Script: {instanceID: 4358}
+      Script: {instanceID: 3956}
+    - Class: 114
+      Script: {instanceID: 4328}
+    - Class: 114
+      Script: {instanceID: 4366}
+    - Class: 114
+      Script: {instanceID: 4506}
+    - Class: 114
+      Script: {instanceID: 654988}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -257,6 +266,8 @@ ScriptsOnlyBuild:
     - Class: 198
       Script: {instanceID: 0}
     - Class: 199
+      Script: {instanceID: 0}
+    - Class: 213
       Script: {instanceID: 0}
     - Class: 222
       Script: {instanceID: 0}
@@ -292,17 +303,17 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 2032}
+      Script: {instanceID: 2036}
     - Class: 114
-      Script: {instanceID: 3460}
+      Script: {instanceID: 2938}
     - Class: 114
-      Script: {instanceID: 3682}
+      Script: {instanceID: 3466}
     - Class: 114
-      Script: {instanceID: 3950}
+      Script: {instanceID: 3688}
     - Class: 114
-      Script: {instanceID: 4320}
+      Script: {instanceID: 3956}
     - Class: 114
-      Script: {instanceID: 125634}
+      Script: {instanceID: 4328}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -554,7 +565,7 @@ ScriptsOnlyBuild:
     className: GroupTrack
   - hash:
       serializedVersion: 2
-      Hash: 6ab6945d49002e3c0db9f3317737da37
+      Hash: e2b227166a8833c28d01845deaade061
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: AnimationControl
@@ -588,6 +599,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: SignalTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: StoryBoardScript
   - hash:
       serializedVersion: 2
       Hash: f1d735cc1a21c3704ab52568f4fbfcf8
@@ -819,6 +836,12 @@ ScriptsOnlyBuild:
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: VolumeValueChange
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Unity.ProGrids.dll
     namespaceName: UnityEngine.ProGrids
     className: IgnoreSnap
@@ -965,17 +988,17 @@ ScriptsOnlyBuild:
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: StoryBoardScript
+    className: PauseMenu
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: c8c5e65e9fb858572516474d6e2102bc
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: VolumeValueChange
+    className: PauseMenuScript
   platform: 19
   scenePathNames:
   - Assets/Scenes/Menu.unity
   - Assets/Scenes/Scene 1.unity
   - Assets/Scenes/Loser POV.unity
   - Assets/Scenes/StoryBoard.unity
-  playerPath: C:/Users/pauli/Desktop/zeniaukurdinges/Inzinerijos_Projektas.exe
+  playerPath: C:/Users/Me/Desktop/team_pepeja/Inzinerijos_Projektas.exe

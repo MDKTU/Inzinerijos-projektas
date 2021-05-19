@@ -20,6 +20,11 @@ public class PlayerController : MonoBehaviour
 
     float speedMultiplier = 1;
     float maxSpeedMultiplier = 10;
+
+    public static bool gameIsPaused;
+
+    AudioListener audioListener = new AudioListener();
+
     // Start is called before the first frame update
     void Start()
     {
@@ -81,9 +86,14 @@ public class PlayerController : MonoBehaviour
             transform.position = clampedPosition;
         }
         moveEnable = false;
-        
+
+
+
+
+
 
     }
+
 
 
     private void OnTriggerEnter(Collider other)

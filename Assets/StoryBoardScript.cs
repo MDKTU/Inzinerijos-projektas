@@ -9,6 +9,9 @@ public class StoryBoardScript : MonoBehaviour
     GameObject sb2;
     GameObject sb3;
     GameObject sb4;
+
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -16,6 +19,7 @@ public class StoryBoardScript : MonoBehaviour
         sb2 = GameObject.Find("2sb");
         sb3 = GameObject.Find("3sb");
         sb4 = GameObject.Find("4sb");
+
     }
     // Update is called once per frame
     void Update()
@@ -33,9 +37,11 @@ public class StoryBoardScript : MonoBehaviour
         {
             sb3.active = false;
         }
-        if (timePassed > 29)
-        {
+        if (timePassed > 29 || Input.GetKeyDown(KeyCode.Return))
+        { 
             SceneManager.LoadScene("Scene 1");
+            //PauseMenuScript.gameIsPaused = false;
+            AudioListener.pause = false;
         }
     }
 }
