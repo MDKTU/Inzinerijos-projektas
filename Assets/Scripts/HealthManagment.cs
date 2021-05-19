@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using UnityEngine.SceneManagement;
 
 public class HealthManagment : MonoBehaviour
 {
@@ -59,5 +59,13 @@ public class HealthManagment : MonoBehaviour
         healthText.GetComponent<Text>().text = "HEALTH POINTS: " + healthPoints;
         Vector2 vector = new Vector2(fullBarLenght * ((float)healthPoints / (float)maxHealth),barHeight);
         healthJuice.GetComponent<RectTransform>().sizeDelta = vector;
+        if (healthPoints == 0)
+        {
+            EndGame();
+        }
+    }
+    void EndGame()
+    {
+        SceneManager.LoadScene("Loser POV");
     }
 }
