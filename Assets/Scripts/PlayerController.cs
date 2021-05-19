@@ -11,6 +11,8 @@ public class PlayerController : MonoBehaviour
     CharacterController characterController;
     public bool moveEnable;
 
+    private GameObject player;
+
     public float jumpHeight = 900f;
     public bool isGrounded;
     public float NumberJumps = 0f;
@@ -24,7 +26,9 @@ public class PlayerController : MonoBehaviour
         moveEnable = true;
         rb = GetComponent<Rigidbody>();
         characterController = GetComponent<CharacterController>();
+        rb.constraints = RigidbodyConstraints.FreezePositionY;
     }
+    
 
 
     
@@ -34,10 +38,11 @@ public class PlayerController : MonoBehaviour
         if (healthManagment.healthPoints > 0) {
             float xMovement = Input.GetAxis("Horizontal") * movementSpeed; // x axis (side to side)
             float zMovement = movementSpeed; // z axis (forward)
-            
-            
+
+
+
             //transform.Translate(new Vector3(xMovement, 0, zMovement) * Time.deltaTime); // Movement execution
-            
+
             Vector3 movement = new Vector3(xMovement, 0, zMovement* speedMultiplier);
             characterController.Move(movement * Time.deltaTime);
 

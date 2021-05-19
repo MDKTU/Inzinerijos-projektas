@@ -56,6 +56,7 @@ public class HealthManagment : MonoBehaviour
     void Update()
     {
         invicibilityfarmesCounter++;
+
         healthText.GetComponent<Text>().text = "HEALTH POINTS: " + healthPoints;
         Vector2 vector = new Vector2(fullBarLenght * ((float)healthPoints / (float)maxHealth),barHeight);
         healthJuice.GetComponent<RectTransform>().sizeDelta = vector;
