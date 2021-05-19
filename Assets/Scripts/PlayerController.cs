@@ -14,6 +14,8 @@ public class PlayerController : MonoBehaviour
     public float NumberJumps = 0f;
     public float MaxJumps = 1;
 
+    float speedMultiplier = 1;
+    float maxSpeedMultiplier = 10;
 
     // Start is called before the first frame update
     void Start()
@@ -29,17 +31,26 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         if (healthManagment.healthPoints > 0) {
-            float xMovement = Input.GetAxis("Horizontal") * movementSpeed / 3; // x axis (side to side)
+            float xMovement = Input.GetAxis("Horizontal") * movementSpeed; // x axis (side to side)
             float zMovement = movementSpeed; // z axis (forward)
             
             
-            // fuck disgrace nes eina per obiektus nepaisant nieko nei collsions nei ka
             //transform.Translate(new Vector3(xMovement, 0, zMovement) * Time.deltaTime); // Movement execution
             
-            Vector3 movement = new Vector3(xMovement, 0, zMovement);
+            Vector3 movement = new Vector3(xMovement, 0, zMovement* speedMultiplier);
             characterController.Move(movement * Time.deltaTime);
+
+            //player rotation
             transform.rotation = Quaternion.LookRotation(movement);
 
+            if(speedMultiplier < maxSpeedMultiplier)
+            {
+                float delta = Time.deltaTime;
+                speedMultiplier += delta / 80;
+            }
+
+
+            //
             if (NumberJumps > MaxJumps - 1)
             {
                 isGrounded = false;
