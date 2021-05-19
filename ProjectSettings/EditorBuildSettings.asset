@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Loser POV.unity
     guid: b538709289873c645ad7892685c40c76
+  - enabled: 1
+    path: Assets/Scenes/StoryBoard.unity
+    guid: 4627b62eabeacdd4d85417b099321ec3
   m_configObjects: {}
